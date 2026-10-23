@@ -1,0 +1,190 @@
+/* ============================================================
+   RelayAid Design Tokens
+   Color System: Deep Navy/Blue backgrounds · Yellow & White text
+   Source palette: color_scheme.txt
+   ============================================================ */
+
+:root {
+
+  /* ── Base Palette (raw values from color_scheme.txt) ─────── */
+  --color-white:         #ffffff;
+  --color-ink-black:     #000814;
+  --color-imperial-blue: #00296b;
+  --color-french-blue:   #003f88;
+  --color-french-blue-2: #32429a;
+  --color-yellow:        #fdc500;
+  --color-gold:          #ffd500;
+
+  /* ── Blue Scale (darker → lighter, generated from base palette) */
+  --blue-950: #000814;   /* ink-black — deepest bg */
+  --blue-900: #001133;   /* near-black blue */
+  --blue-800: #00296b;   /* imperial-blue */
+  --blue-700: #003f88;   /* french-blue — primary bg */
+  --blue-600: #32429a;   /* french-blue-2 — secondary bg */
+  --blue-500: #4a5ab5;   /* medium blue — active states */
+  --blue-400: #6272cc;   /* soft blue — hover surfaces */
+  --blue-300: #8a9de0;   /* muted blue — borders, dividers */
+  --blue-200: #b3beed;   /* light blue — subtle backgrounds */
+  --blue-100: #d9dff5;   /* very light blue — input fills */
+  --blue-50:  #eef1fb;   /* near-white blue — card backgrounds */
+
+  /* ── Yellow / Gold Scale ─────────────────────────────────── */
+  --yellow-900: #7a5e00;  /* dark gold — text on light bg */
+  --yellow-700: #b38a00;  /* medium gold */
+  --yellow-500: #fdc500;  /* school-bus-yellow — CTA, warnings */
+  --yellow-400: #ffd500;  /* gold — headings, highlights */
+  --yellow-200: #fff0a0;  /* soft gold — hover tint */
+  --yellow-100: #fffacc;  /* very pale yellow — subtle accent */
+
+  /* ── Semantic Backgrounds ────────────────────────────────── */
+  --bg-app:         var(--blue-800);
+  --bg-surface:     var(--blue-700);
+  --bg-surface-alt: var(--blue-600);
+  --bg-elevated:    var(--blue-500);
+  --bg-overlay:     rgba(0, 8, 20, 0.7);
+  --bg-input:       var(--blue-100);
+  --bg-input-focus: var(--color-white);
+
+  /* ── Semantic Text Colors ────────────────────────────────── */
+  --text-primary:    var(--color-white);
+  --text-heading:    var(--yellow-400);
+  --text-accent:     var(--yellow-500);
+  --text-muted:      var(--blue-200);
+  --text-disabled:   var(--blue-300);
+  --text-on-yellow:  var(--blue-800);
+  --text-on-input:   var(--color-ink-black);
+  --text-link:       var(--yellow-400);
+  --text-link-hover: var(--yellow-200);
+
+  /* ── Borders & Dividers ──────────────────────────────────── */
+  --border-default:      var(--blue-400);
+  --border-subtle:       var(--blue-300);
+  --border-strong:       var(--yellow-500);
+  --border-input:        var(--blue-300);
+  --border-input-focus:  var(--yellow-500);
+
+  /* ── Button: Primary (Yellow CTA) ───────────────────────── */
+  --btn-primary-bg:        var(--yellow-500);
+  --btn-primary-bg-hover:  var(--yellow-400);
+  --btn-primary-bg-active: var(--yellow-700);
+  --btn-primary-text:      var(--blue-800);
+  --btn-primary-border:    transparent;
+
+  /* ── Button: Secondary (Outlined Blue) ──────────────────── */
+  --btn-secondary-bg:       transparent;
+  --btn-secondary-bg-hover: var(--blue-500);
+  --btn-secondary-text:     var(--color-white);
+  --btn-secondary-border:   var(--blue-300);
+
+  /* ── Button: Ghost (Minimal) ─────────────────────────────── */
+  --btn-ghost-bg:       transparent;
+  --btn-ghost-bg-hover: var(--blue-400);
+  --btn-ghost-text:     var(--yellow-400);
+  --btn-ghost-border:   transparent;
+
+  /* ── Button: Danger ──────────────────────────────────────── */
+  --btn-danger-bg:       #c0392b;
+  --btn-danger-bg-hover: #a93226;
+  --btn-danger-text:     var(--color-white);
+
+  /* ── Status / Severity Colors ────────────────────────────── */
+  --status-safe:         #27ae60;
+  --status-warning:      var(--yellow-500);
+  --status-danger:       #e74c3c;
+  --status-blocked:      #8e44ad;
+  --status-info:         var(--blue-300);
+  --status-expired:      #95a5a6;
+  --status-safe-text:    #2ecc71;
+  --status-warning-text: var(--yellow-500);
+  --status-danger-text:  #e74c3c;
+  --status-blocked-text: #bb8fce;
+  --status-expired-text: #bdc3c7;
+
+  /* ── Alert Banners ───────────────────────────────────────── */
+  --alert-critical-bg:     rgba(231, 76, 60, 0.18);
+  --alert-critical-border: #e74c3c;
+  --alert-warning-bg:      rgba(253, 197, 0, 0.15);
+  --alert-warning-border:  var(--yellow-500);
+  --alert-info-bg:         rgba(74, 90, 181, 0.25);
+  --alert-info-border:     var(--blue-400);
+
+  /* ── Navigation ──────────────────────────────────────────── */
+  --nav-bg:          var(--blue-950);
+  --nav-text:        var(--blue-200);
+  --nav-text-active: var(--yellow-400);
+  --nav-hover-bg:    var(--blue-800);
+  --nav-border:      var(--blue-800);
+  --nav-indicator:   var(--yellow-500);
+
+  /* ── Cards ───────────────────────────────────────────────── */
+  --card-bg:          var(--blue-700);
+  --card-bg-hover:    var(--blue-600);
+  --card-border:      var(--blue-400);
+  --card-shadow:      0 4px 24px rgba(0, 8, 20, 0.45);
+  --card-shadow-hover:0 8px 32px rgba(0, 8, 20, 0.65);
+
+  /* ── Glassmorphism ───────────────────────────────────────── */
+  --glass-bg:     rgba(0, 63, 136, 0.55);
+  --glass-border: rgba(253, 197, 0, 0.2);
+  --glass-blur:   12px;
+
+  /* ── Sidebar / Drawer ────────────────────────────────────── */
+  --sidebar-bg:     var(--blue-950);
+  --sidebar-border: var(--blue-800);
+
+  /* ── Table ───────────────────────────────────────────────── */
+  --table-header-bg: var(--blue-900);
+  --table-row-bg:    var(--blue-800);
+  --table-row-alt-bg:var(--blue-700);
+  --table-row-hover: var(--blue-600);
+  --table-border:    var(--blue-400);
+
+  /* ── Typography ──────────────────────────────────────────── */
+  --font-sans: 'Inter', 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --font-normal:   400;
+  --font-medium:   500;
+  --font-semibold: 600;
+  --font-bold:     700;
+
+  /* ── Spacing Scale ───────────────────────────────────────── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* ── Border Radius ───────────────────────────────────────── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ─────────────────────────────────────────── */
+  --transition-fast:   150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow:   400ms ease;
+
+  /* ── Z-index Scale ───────────────────────────────────────── */
+  --z-base:     0;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+}
