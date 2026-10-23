@@ -182,6 +182,13 @@ function buildSidebar(user: AppUser, current: Route): string {
           </li>
         `).join('')}
       </ul>
+      <div class="sidebar-footer">
+        <div class="sidebar-live-tag">
+          <span class="live-indicator-dot"></span>
+          <span>Live System Online</span>
+        </div>
+        <div class="sidebar-time-display">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+      </div>
     </nav>
   `;
 }

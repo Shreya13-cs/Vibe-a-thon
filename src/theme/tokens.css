@@ -16,8 +16,9 @@
   --color-gold:          #ffd500;
 
   /* ── Blue Scale (darker → lighter, generated from base palette) */
-  --blue-950: #000814;   /* ink-black — deepest bg */
-  --blue-900: #001133;   /* near-black blue */
+  --blue-950: #001133;   /* deep navy — deepest bg */
+  --blue-900: #001a4d;   /* rich navy */
+  --blue-850: #002261;   /* sidebar mid-tone */
   --blue-800: #00296b;   /* imperial-blue */
   --blue-700: #003f88;   /* french-blue — primary bg */
   --blue-600: #32429a;   /* french-blue-2 — secondary bg */
@@ -41,7 +42,7 @@
   --bg-surface:     var(--blue-700);
   --bg-surface-alt: var(--blue-600);
   --bg-elevated:    var(--blue-500);
-  --bg-overlay:     rgba(0, 8, 20, 0.7);
+  --bg-overlay:     rgba(0, 26, 77, 0.85);
   --bg-input:       var(--blue-100);
   --bg-input-focus: var(--color-white);
 
@@ -52,7 +53,7 @@
   --text-muted:      var(--blue-200);
   --text-disabled:   var(--blue-300);
   --text-on-yellow:  var(--blue-800);
-  --text-on-input:   var(--color-ink-black);
+  --text-on-input:   var(--blue-950);
   --text-link:       var(--yellow-400);
   --text-link-hover: var(--yellow-200);
 
@@ -108,36 +109,36 @@
   --alert-info-bg:         rgba(74, 90, 181, 0.25);
   --alert-info-border:     var(--blue-400);
 
-  /* ── Navigation ──────────────────────────────────────────── */
-  --nav-bg:          var(--blue-950);
+  /* ── Navigation (Rich Blue Theme) ────────────────────────── */
+  --nav-bg:          rgba(0, 41, 107, 0.5);
   --nav-text:        var(--blue-200);
   --nav-text-active: var(--yellow-400);
-  --nav-hover-bg:    var(--blue-800);
-  --nav-border:      var(--blue-800);
+  --nav-hover-bg:    rgba(74, 90, 181, 0.35);
+  --nav-border:      rgba(98, 114, 204, 0.35);
   --nav-indicator:   var(--yellow-500);
 
   /* ── Cards ───────────────────────────────────────────────── */
   --card-bg:          var(--blue-700);
   --card-bg-hover:    var(--blue-600);
   --card-border:      var(--blue-400);
-  --card-shadow:      0 4px 24px rgba(0, 8, 20, 0.45);
-  --card-shadow-hover:0 8px 32px rgba(0, 8, 20, 0.65);
+  --card-shadow:      0 8px 24px rgba(0, 26, 77, 0.4), 0 2px 6px rgba(0, 41, 107, 0.2);
+  --card-shadow-hover:0 12px 32px rgba(0, 26, 77, 0.6), 0 4px 12px rgba(74, 90, 181, 0.25);
 
   /* ── Glassmorphism ───────────────────────────────────────── */
   --glass-bg:     rgba(0, 63, 136, 0.55);
   --glass-border: rgba(253, 197, 0, 0.2);
   --glass-blur:   12px;
 
-  /* ── Sidebar / Drawer ────────────────────────────────────── */
-  --sidebar-bg:     var(--blue-950);
-  --sidebar-border: var(--blue-800);
+  /* ── Sidebar / Drawer (Deep Blue Palette) ────────────────── */
+  --sidebar-bg:     linear-gradient(180deg, var(--blue-950) 0%, var(--blue-900) 40%, var(--blue-850) 100%);
+  --sidebar-border: rgba(98, 114, 204, 0.3);
 
   /* ── Table ───────────────────────────────────────────────── */
-  --table-header-bg: var(--blue-900);
+  --table-header-bg: linear-gradient(180deg, rgba(0, 41, 107, 0.95), rgba(0, 34, 97, 0.95));
   --table-row-bg:    var(--blue-800);
   --table-row-alt-bg:var(--blue-700);
   --table-row-hover: var(--blue-600);
-  --table-border:    var(--blue-400);
+  --table-border:    rgba(98, 114, 204, 0.3);
 
   /* ── Typography ──────────────────────────────────────────── */
   --font-sans: 'Inter', 'Outfit', system-ui, -apple-system, sans-serif;
